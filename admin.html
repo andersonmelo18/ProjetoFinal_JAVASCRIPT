@@ -26,12 +26,36 @@
             background: #fff;
         }
 
+        /* Corpo da página ocupa toda a altura da tela */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estrutura principal como flex */
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page {
+            flex: 1;
+            /* faz o main crescer para ocupar espaço */
+        }
+
         main {
             min-height: 70vh;
-            /* evita encostar no footer */
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        footer {
+            background: #f1f1f1;
+            text-align: center;
+            padding: 15px 0;
         }
     </style>
 </head>
