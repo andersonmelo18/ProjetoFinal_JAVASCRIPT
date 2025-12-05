@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,111 +12,120 @@
     <link rel="stylesheet" href="css/default.css">
 
     <style>
-        .nao-visualizada { font-weight: bold; }
-        .visualizada { font-weight: normal; }
+        .nao-visualizada {
+            font-weight: bold;
+        }
+
+        .visualizada {
+            font-weight: normal;
+        }
     </style>
 </head>
 
 <body>
-<div class="page">
+    <div class="page">
 
-    <!-- HEADER -->
-    <header>
-        <div id="title">
-            <img src="images/barco1.png" alt="ícone de barco" />
-            <div class="headtitle">
-                <h1>Luxo</h1>
-                <h2>Aluguel de iates</h2>
-            </div>
-        </div>
-
-        <nav>
-            <ul class="navmenu">
-                <li><a href="index.html">Página inicial</a></li>
-                <li><a href="aluguel.html">Aluguel de iates</a></li>
-                <li><a href="destinos.html">Destinos</a></li>
-                <li><a href="tripulacao.html">Tripulação</a></li>
-                <li><a href="admin.html" class="accent">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- MAIN -->
-    <main>
-        <div class="pagtitle">
-            <div class="bgtitle"></div>
-            <h2>Painel de Administração</h2>
-        </div>
-
-        <div class="container-fluid mt-4">
-
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h3>⚙️ Área Administrativa</h3>
-                <a href="admin.html" class="button">Sair / Voltar ao Login</a>
+        <!-- HEADER -->
+        <header>
+            <div id="title">
+                <img src="images/barco1.png" alt="ícone de barco" />
+                <div class="headtitle">
+                    <h1>Luxo</h1>
+                    <h2>Aluguel de iates</h2>
+                </div>
             </div>
 
-            <!-- USUÁRIOS PENDENTES -->
-            <h3 class="mt-4 mb-3">👥 Usuários Pendentes de Aprovação</h3>
-            <div class="table-responsive mb-5">
-                <table id="tabelaUsuarios" class="table table-bordered table-sm align-middle">
-                    <thead class="table-info">
-                        <tr>
-                            <th>Email</th>
-                            <th>Nível Desejado</th>
-                            <th>Status</th>
-                            <th style="width: 150px;">Ação</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+            <nav>
+                <ul class="navmenu">
+                    <li><a href="index.html">Página inicial</a></li>
+                    <li><a href="aluguel.html">Aluguel de iates</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="tripulacao.html">Tripulação</a></li>
+                    <li><a href="contato.html" class="accent">Contato</a></li>
+
+                    <!-- BOTÃO NOVO -->
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main>
+            <div class="pagtitle">
+                <div class="bgtitle"></div>
+                <h2>Painel de Administração</h2>
             </div>
 
-            <!-- TODOS OS USUÁRIOS -->
-            <h3 class="mt-5 mb-3">🛠️ Gerenciamento Total de Usuários</h3>
-            <div class="table-responsive mb-5">
-                <table id="tabelaTodosUsuarios" class="table table-bordered table-sm align-middle">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Email</th>
-                            <th>Status</th>
-                            <th>Nível de Acesso</th>
-                            <th style="width: 250px;">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+            <div class="container-fluid mt-4">
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3>⚙️ Área Administrativa</h3>
+                    <a href="admin.html" class="button">Sair / Voltar ao Login</a>
+                </div>
+
+                <!-- USUÁRIOS PENDENTES -->
+                <h3 class="mt-4 mb-3">👥 Usuários Pendentes de Aprovação</h3>
+                <div class="table-responsive mb-5">
+                    <table id="tabelaUsuarios" class="table table-bordered table-sm align-middle">
+                        <thead class="table-info">
+                            <tr>
+                                <th>Email</th>
+                                <th>Nível Desejado</th>
+                                <th>Status</th>
+                                <th style="width: 150px;">Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <!-- TODOS OS USUÁRIOS -->
+                <h3 class="mt-5 mb-3">🛠️ Gerenciamento Total de Usuários</h3>
+                <div class="table-responsive mb-5">
+                    <table id="tabelaTodosUsuarios" class="table table-bordered table-sm align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Nível de Acesso</th>
+                                <th style="width: 250px;">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+                <!-- MENSAGENS -->
+                <h3 class="mb-3">📥 Mensagens Recebidas</h3>
+                <div class="table-responsive">
+                    <table id="tabelaMensagens" class="table table-striped table-hover align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Índice</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Mensagem</th>
+                                <th style="width: 250px;">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
             </div>
+        </main>
+    </div>
 
-            <!-- MENSAGENS -->
-            <h3 class="mb-3">📥 Mensagens Recebidas</h3>
-            <div class="table-responsive">
-                <table id="tabelaMensagens" class="table table-striped table-hover align-middle">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Índice</th>
-                            <th>Nome</th>
-                            <th>Email</th>
-                            <th>Mensagem</th>
-                            <th style="width: 250px;">Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2023 por Luxo aluguel de iates</p>
+    </footer>
 
-        </div>
-    </main>
-</div>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2023 por Luxo aluguel de iates</p>
-</footer>
-
-<!-- SCRIPTS -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/api.js"></script>
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
 
 </body>
+
 </html>

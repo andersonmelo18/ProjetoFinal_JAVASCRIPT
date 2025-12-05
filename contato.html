@@ -75,22 +75,19 @@
 
   <script>
     document.getElementById("form-contato").addEventListener("submit", function (e) {
-      e.preventDefault();
+  e.preventDefault();
 
-      const nome = document.getElementById("nome").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const msg = document.getElementById("msg").value.trim();
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const msg = document.getElementById("msg").value.trim();
 
-      // ✔️ Forma correta de enviar ao API.JS
-      inserirMensagem({
-        nome: nome,
-        email: email,
-        mensagem: msg
-      });
+  // ENVIA CORRETAMENTE PARA O API.JS
+  inserirMensagem(nome, email, msg);
 
-      alert("Mensagem enviada com sucesso!");
-      this.reset();
-    });
+  alert("Mensagem enviada com sucesso!");
+  this.reset();
+});
+
   </script>
 </body>
 
