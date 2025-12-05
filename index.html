@@ -1,56 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Enviar Mensagem</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxo - Aluguel de iates</title>
+    <link rel="shortcut icon" href="images/barco2.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/default.css" />
+  </head>
 
-    <div class="container mt-5">
-        <h2 class="mb-4">📧 Envie sua Mensagem</h2>
+  <body>
+    <div class="page">
+    <header>
+      <div id="title">
+        <img src="images/barco1.png" alt="ícone de barco" />
+        <div class="headtitle">
+          <h1>Luxo</h1>
+          <h2>Aluguel de iates</h2>
+        </div>
+      </div>
 
-        <form id="formContato">
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="mensagem" class="form-label">Mensagem</label>
-                <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
-            </div>
-            <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar Mensagem</button>
-        </form>
+      <nav>
+        <ul class="navmenu">
+          <li><a href="index.html">Página inicial</a></li>
+          <li><a href="aluguel.html">Aluguel de iates</a></li>
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="tripulacao.html">Tripulação</a></li>
+          <li><a href="contato.html" class="accent">Contato</a></li>
 
-        <p class="mt-4"><a href="admin.html">Acesso Administrativo (Login)</a></p>
+          <!-- BOTÃO NOVO -->
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="principal">
+        <img src="images/barcoprincipal.jpg" alt="barco com pessoas" />
+        <div class="box">
+          <h2>Você só encontra coisas boas, se combinar luxo e paixão.</h2>
+          <div class="insidebox">
+            <img src="images/barco2.png" alt="ícone de barco" />
+            <p>
+              Ligue agora para agendar as férias de sua vida:
+              <span>(00) 8000-0000</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="topics">
+        <section class="destinos">
+          <div class="subtitle">
+            <img src="images/destino.png" alt="ícone de leme" />
+            <h2>Destinos</h2>
+          </div>
+          <h3>Sou um título. Clique aqui para me editar.</h3>
+          <p>
+            Clique aqui para adicionar seu texto e me editar. É fácil. Basta
+            clicar em "Editar Texto" ou clicar duas vezes sobre mim e poderá
+            adicionar seu próprio conteúdo e mudar fontes. Sou um ótimo lugar
+            para contar sua história e permitir que seus visitantes saibam um
+            pouco mais sobre você.
+          </p>
+
+          <img
+            src="images/barcodestino.jpg"
+            alt="barcos numa praia com coqueiros"
+          />
+        </section>
+
+        <section class="frota">
+          <div class="subtitle">
+            <img src="images/nossafrota.png" alt="ícone de leme" />
+            <h2>Nossa frota</h2>
+          </div>
+          <h3>Sou um título. Clique aqui para me editar.</h3>
+          <p>
+            Clique aqui para adicionar seu texto e me editar. É fácil. Basta
+            clicar em "Editar Texto" ou clicar duas vezes sobre mim e poderá
+            adicionar seu próprio conteúdo e mudar fontes. Sou um ótimo lugar
+            para contar sua história e permitir que seus visitantes saibam um
+            pouco mais sobre você.
+          </p>
+
+          <div class="container">
+            <img src="images/barconossafrota2.jpg" alt="imagem de barco" />
+            <img
+              src="images/barconossafrota1.jpg"
+              alt="imagem de barco com vela"
+            />
+            <img
+              src="images/barconossafrota1.jpg"
+              alt="imagem de barco com vela"
+            />
+            <img src="images/barconossafrota2.jpg" alt="imagem de barco" />
+          </div>
+        </section>
+      </div>
+    </main>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="js/api.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#formContato').submit(function(event) {
-                event.preventDefault();
-
-                var nome = $('#nome').val();
-                var email = $('#email').val();
-                var mensagemTexto = $('#mensagem').val();
-
-                try {
-                    inserirMensagem(nome, email, mensagemTexto); 
-                    alert("Mensagem enviada com sucesso!");
-                    $('#formContato')[0].reset(); 
-                } catch (error) {
-                    console.error("Erro ao inserir mensagem:", error);
-                    alert("Houve um erro ao enviar a mensagem. Verifique o console.");
-                }
-            });
-        });
-    </script>
-</body>
+    <footer>
+      <p>© 2023 por Luxo aluguel de iates</p>
+    </footer>
+  </body>
 </html>
